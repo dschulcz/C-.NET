@@ -1,0 +1,14 @@
+3,10
+;;;;W;W;W;;;
+;W;C-True;;;;;;;
+;W;C-True;;;;;C-True;;
+;W;W;;;C-True;C-True;C-True;;
+;;;;;M;;;;
+;;;W;W;W;W;;;
+;;;;;;;W;;
+;;C-True;;;;;W;;
+;;C-True;C-True;C-True;W;W;W;;
+;;;;;;;;;
+0-0-0-True---1-2-0-2
+1-8-8-True---1-2-0-2
+2-0-9-True---1-2-0-2

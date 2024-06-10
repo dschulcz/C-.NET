@@ -1,0 +1,324 @@
+﻿<Window x:Class="Bomberman.WPF.View.EditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Bomberman.WPF.View"
+        mc:Ignorable="d"
+        Title="EditorWindow" Height="450" Width="800"
+        WindowState="Maximized"
+        WindowStyle = "SingleBorderWindow"
+        ResizeMode = "CanResize">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="3*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!--gamefield-->
+        <ItemsControl Grid.Row="0" Grid.Column="0" ItemsSource="{Binding EditorFields}">
+            <!--add ItemsSource later-->
+            <!-- how the whole itemscontrol will look like-->
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Rows="10" Columns="10" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <!-- how each button will look like-->
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <Button Command="{Binding ClickCommand}" CommandParameter="{Binding Number}" Content="">
+                        <Button.Style>
+                            <Style TargetType="Button">
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player1">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Bomberman1.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player2">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Bomberman2.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player3">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Bomberman3.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Clear">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\empty.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Bomb">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Bomb.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Wall">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\wall2.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Monster">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\monster.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Chest">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\box.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Bonus">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Bonus.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player1Player2">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player1Player2.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player1Player2Bomb">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player1Player2Bomb.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player1Player2Chest">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player1Player2Box.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player1Player2Wall">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player1Player2Wall.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player1Player3">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player1Player3.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player1Player3Bomb">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player1Player3Bomb.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player1Player3Chest">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player1Player3Box.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player1Player3Wall">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player1Player3Wall.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player2Player3">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player2Player3.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player2Player3Bomb">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player2Player3Bomb.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player2Player3Chest">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player2Player3Box.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player2Player3Wall">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player2Player3Wall.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player1Bomb">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player1Bomb.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player2Bomb">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player2Bomb.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player3Bomb">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player3Bomb.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player1Chest">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player1Box.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player2Chest">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player2Box.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player3Chest">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player3Box.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player1Wall">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player1Wall.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player2Wall">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player2Wall.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player3Wall">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player3Wall.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player1Player2Player3">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player1Player2Player3.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player1Player2Player3Bomb">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player1Player2Player3Bomb.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player1Player2Player3Chest">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player1Player2Player3Box.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                    <DataTrigger Binding="{Binding Value}" Value="Player1Player2Player3Wall">
+                                        <Setter Property="Background">
+                                            <Setter.Value>
+                                                <ImageBrush ImageSource="Assets\Images\unified\Player1Player2Player3Wall.png"/>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </Button.Style>
+                    </Button>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+            <ItemsControl.ItemContainerStyle>
+                <!--where each button will be positioned-->
+                <Style>
+                    <!-- TODO: Bind these-->
+                    <Setter Property="Grid.Row" Value="{Binding ?}" />
+                    <Setter Property="Grid.Column" Value="{Binding ?}" />
+                </Style>
+            </ItemsControl.ItemContainerStyle>
+        </ItemsControl>
+        
+
+        <!--Main editing elements-->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!--map size-->
+            <Button Grid.Row="0" Grid.Column="0" Content="Egyes Játékos" Command="{Binding PlayerSpawnCommand}"/>
+            <Button Grid.Row="0" Grid.Column="1" Content="Kettes Játékos" Command="{Binding Player2SpawnCommand}"/>
+            <!--elements-->
+            <!--TODO: add sources for the images-->
+            <!--wall-->
+            <Button Grid.Row="1" Grid.Column="0" Content="Hármas Játékos" Command="{Binding Player3SpawnCommand}"/>
+            <!--box-->
+            <Button Grid.Row="1" Grid.Column="1" Content="Doboz" Command="{Binding BoxCommand}"/>
+            <!--player-->
+            <Button Grid.Row="2" Grid.Column="0" Content="Fal" Command="{Binding WallCommand}"/>
+            <!--monster-->
+            <Button Grid.Row="2" Grid.Column="1" Content="Szörny" Command="{Binding MonsterSpawnCommand}"/>
+            
+            <Button Grid.Row="3" Grid.Column="1" Content="Törlő mód" Command="{Binding ClearModeCommand}"/>
+            <Button Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Content="Pálya mentése" Command="{Binding SaveMapCommand}"/>
+            <Button Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Content="Pálya betöltése" Command="{Binding LoadMapCommand}"/>
+            <Button Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" Content="Kilépés főmenübe" Command="{Binding BackToMenuCommand}"/>
+        </Grid>
+    </Grid>
+</Window>

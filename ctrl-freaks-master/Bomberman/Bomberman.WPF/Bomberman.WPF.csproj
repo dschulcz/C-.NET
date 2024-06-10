@@ -1,0 +1,129 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="View\Assets\Images\unified\Bomb.png" />
+    <None Remove="View\Assets\Images\unified\Bomberman1.png" />
+    <None Remove="View\Assets\Images\unified\Bomberman2.png" />
+    <None Remove="View\Assets\Images\unified\Bomberman3.png" />
+    <None Remove="View\Assets\Images\unified\Bonus.png" />
+    <None Remove="View\Assets\Images\unified\box.png" />
+    <None Remove="View\Assets\Images\unified\empty.png" />
+    <None Remove="View\Assets\Images\unified\explosion.png" />
+    <None Remove="View\Assets\Images\unified\MenuBackground.png" />
+    <None Remove="View\Assets\Images\unified\monster.png" />
+    <None Remove="View\Assets\Images\unified\MonsterMonster.png" />
+    <None Remove="View\Assets\Images\unified\MonsterMonsterMonster.png" />
+    <None Remove="View\Assets\Images\unified\MonsterMonsterMonsterMonster.png" />
+    <None Remove="View\Assets\Images\unified\Player1Bomb.png" />
+    <None Remove="View\Assets\Images\unified\Player1Box.png" />
+    <None Remove="View\Assets\Images\unified\Player1MonsterMonster.png" />
+    <None Remove="View\Assets\Images\unified\Player1MonsterMonsterMonster.png" />
+    <None Remove="View\Assets\Images\unified\Player1MonsterMonsterMonsterMonster.png" />
+    <None Remove="View\Assets\Images\unified\Player1Player2.png" />
+    <None Remove="View\Assets\Images\unified\Player1Player2Bomb.png" />
+    <None Remove="View\Assets\Images\unified\Player1Player2Box.png" />
+    <None Remove="View\Assets\Images\unified\Player1Player2MonsterMonster.png" />
+    <None Remove="View\Assets\Images\unified\Player1Player2MonsterMonsterMonster.png" />
+    <None Remove="View\Assets\Images\unified\Player1Player2Player3.png" />
+    <None Remove="View\Assets\Images\unified\Player1Player2Player3Bomb.png" />
+    <None Remove="View\Assets\Images\unified\Player1Player2Player3Box.png" />
+    <None Remove="View\Assets\Images\unified\Player1Player2Player3Wall.png" />
+    <None Remove="View\Assets\Images\unified\Player1Player2Wall.png" />
+    <None Remove="View\Assets\Images\unified\Player1Player3.png" />
+    <None Remove="View\Assets\Images\unified\Player1Player3Bomb.png" />
+    <None Remove="View\Assets\Images\unified\Player1Player3Box.png" />
+    <None Remove="View\Assets\Images\unified\Player1Player3MonsterMonster.png" />
+    <None Remove="View\Assets\Images\unified\Player1Player3MonsterMonsterMonster.png" />
+    <None Remove="View\Assets\Images\unified\Player1Player3Wall.png" />
+    <None Remove="View\Assets\Images\unified\Player1Wall.png" />
+    <None Remove="View\Assets\Images\unified\Player2Bomb.png" />
+    <None Remove="View\Assets\Images\unified\Player2Box.png" />
+    <None Remove="View\Assets\Images\unified\Player2MonsterMonster.png" />
+    <None Remove="View\Assets\Images\unified\Player2MonsterMonsterMonster.png" />
+    <None Remove="View\Assets\Images\unified\Player2MonsterMonsterMonsterMonster.png" />
+    <None Remove="View\Assets\Images\unified\Player2Player3.png" />
+    <None Remove="View\Assets\Images\unified\Player2Player3Bomb.png" />
+    <None Remove="View\Assets\Images\unified\Player2Player3Box.png" />
+    <None Remove="View\Assets\Images\unified\Player2Player3MonsterMonster.png" />
+    <None Remove="View\Assets\Images\unified\Player2Player3MonsterMonsterMonster.png" />
+    <None Remove="View\Assets\Images\unified\Player2Player3Wall.png" />
+    <None Remove="View\Assets\Images\unified\Player2Wall.png" />
+    <None Remove="View\Assets\Images\unified\Player3Bomb.png" />
+    <None Remove="View\Assets\Images\unified\Player3Box.png" />
+    <None Remove="View\Assets\Images\unified\Player3MonsterMonster.png" />
+    <None Remove="View\Assets\Images\unified\Player3MonsterMonsterMonster.png" />
+    <None Remove="View\Assets\Images\unified\Player3MonsterMonsterMonsterMonster.png" />
+    <None Remove="View\Assets\Images\unified\Player3Wall.png" />
+    <None Remove="View\Assets\Images\unified\wall2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bomberman\Bomberman.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="View\Assets\Images\unified\Bomb.png" />
+    <Resource Include="View\Assets\Images\unified\Bomberman1.png" />
+    <Resource Include="View\Assets\Images\unified\Bomberman2.png" />
+    <Resource Include="View\Assets\Images\unified\Bomberman3.png" />
+    <Resource Include="View\Assets\Images\unified\Bonus.png" />
+    <Resource Include="View\Assets\Images\unified\box.png" />
+    <Resource Include="View\Assets\Images\unified\empty.png" />
+    <Resource Include="View\Assets\Images\unified\explosion.png" />
+    <Resource Include="View\Assets\Images\unified\MenuBackground.png" />
+    <Resource Include="View\Assets\Images\unified\monster.png" />
+    <Resource Include="View\Assets\Images\unified\MonsterMonster.png" />
+    <Resource Include="View\Assets\Images\unified\MonsterMonsterMonster.png" />
+    <Resource Include="View\Assets\Images\unified\MonsterMonsterMonsterMonster.png" />
+    <Resource Include="View\Assets\Images\unified\Player1Bomb.png" />
+    <Resource Include="View\Assets\Images\unified\Player1Box.png" />
+    <Resource Include="View\Assets\Images\unified\Player1MonsterMonster.png" />
+    <Resource Include="View\Assets\Images\unified\Player1MonsterMonsterMonster.png" />
+    <Resource Include="View\Assets\Images\unified\Player1MonsterMonsterMonsterMonster.png" />
+    <Resource Include="View\Assets\Images\unified\Player1Player2.png" />
+    <Resource Include="View\Assets\Images\unified\Player1Player2Bomb.png" />
+    <Resource Include="View\Assets\Images\unified\Player1Player2Box.png" />
+    <Resource Include="View\Assets\Images\unified\Player1Player2MonsterMonster.png" />
+    <Resource Include="View\Assets\Images\unified\Player1Player2MonsterMonsterMonster.png" />
+    <Resource Include="View\Assets\Images\unified\Player1Player2Player3.png" />
+    <Resource Include="View\Assets\Images\unified\Player1Player2Player3Bomb.png" />
+    <Resource Include="View\Assets\Images\unified\Player1Player2Player3Box.png" />
+    <Resource Include="View\Assets\Images\unified\Player1Player2Player3Wall.png" />
+    <Resource Include="View\Assets\Images\unified\Player1Player2Wall.png" />
+    <Resource Include="View\Assets\Images\unified\Player1Player3.png" />
+    <Resource Include="View\Assets\Images\unified\Player1Player3Bomb.png" />
+    <Resource Include="View\Assets\Images\unified\Player1Player3Box.png" />
+    <Resource Include="View\Assets\Images\unified\Player1Player3MonsterMonster.png" />
+    <Resource Include="View\Assets\Images\unified\Player1Player3MonsterMonsterMonster.png" />
+    <Resource Include="View\Assets\Images\unified\Player1Player3Wall.png" />
+    <Resource Include="View\Assets\Images\unified\Player1Wall.png" />
+    <Resource Include="View\Assets\Images\unified\Player2Bomb.png" />
+    <Resource Include="View\Assets\Images\unified\Player2Box.png" />
+    <Resource Include="View\Assets\Images\unified\Player2MonsterMonsterMonster.png" />
+    <Resource Include="View\Assets\Images\unified\Player2MonsterMonsterMonsterMonster.png" />
+    <Resource Include="View\Assets\Images\unified\Player2MonsterMonster.png" />
+    <Resource Include="View\Assets\Images\unified\Player2Player3.png" />
+    <Resource Include="View\Assets\Images\unified\Player2Player3Bomb.png" />
+    <Resource Include="View\Assets\Images\unified\Player2Player3Box.png" />
+    <Resource Include="View\Assets\Images\unified\Player2Player3MonsterMonster.png" />
+    <Resource Include="View\Assets\Images\unified\Player2Player3MonsterMonsterMonster.png" />
+    <Resource Include="View\Assets\Images\unified\Player2Player3Wall.png" />
+    <Resource Include="View\Assets\Images\unified\Player2Wall.png" />
+    <Resource Include="View\Assets\Images\unified\Player3Bomb.png" />
+    <Resource Include="View\Assets\Images\unified\Player3Box.png" />
+    <Resource Include="View\Assets\Images\unified\Player3MonsterMonster.png" />
+    <Resource Include="View\Assets\Images\unified\Player3MonsterMonsterMonster.png" />
+    <Resource Include="View\Assets\Images\unified\Player3MonsterMonsterMonsterMonster.png" />
+    <Resource Include="View\Assets\Images\unified\Player3Wall.png" />
+    <Resource Include="View\Assets\Images\unified\wall2.png" />
+  </ItemGroup>
+
+</Project>
